@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="ModelRecivingDataTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="399"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="RSc-HS-hwj">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewControllerID" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0eM-l7-ThN" customClass="PageViewController" customModule="ModelRecivingDataTutorial" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvZ-8o-tEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="-320"/>
+        </scene>
+        <!--City Weather View Controller-->
+        <scene sceneID="wBz-yx-iFM">
+            <objects>
+                <viewController storyboardIdentifier="CityWeatherControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IlY-Dh-Uev" customClass="CityWeatherViewController" customModule="ModelRecivingDataTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UJV-lb-Jmw"/>
+                        <viewControllerLayoutGuide type="bottom" id="FZe-oC-kYF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nPf-6T-SVS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moscow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zj1-WG-3W9">
+                                <rect key="frame" x="61" y="207" width="478" height="74.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="65"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="274℉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fos-xO-1Qd">
+                                <rect key="frame" x="26" y="277" width="548" height="114.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="100"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="h2T-fe-UCF">
+                                <rect key="frame" x="282" y="316" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fos-xO-1Qd" secondAttribute="trailing" constant="6" id="0SX-xR-h0u"/>
+                            <constraint firstItem="h2T-fe-UCF" firstAttribute="centerY" secondItem="fos-xO-1Qd" secondAttribute="centerY" id="1DW-ZE-N1L"/>
+                            <constraint firstItem="fos-xO-1Qd" firstAttribute="centerY" secondItem="nPf-6T-SVS" secondAttribute="centerY" constant="34.25" id="5cR-8q-bkp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zj1-WG-3W9" secondAttribute="trailing" constant="41" id="HvF-DC-NKj"/>
+                            <constraint firstItem="zj1-WG-3W9" firstAttribute="leading" secondItem="nPf-6T-SVS" secondAttribute="leadingMargin" constant="41" id="RsX-36-Fm9"/>
+                            <constraint firstItem="zj1-WG-3W9" firstAttribute="centerX" secondItem="nPf-6T-SVS" secondAttribute="centerX" id="aEt-Ns-G4K"/>
+                            <constraint firstItem="fos-xO-1Qd" firstAttribute="leading" secondItem="nPf-6T-SVS" secondAttribute="leadingMargin" constant="6" id="mt5-58-XU8"/>
+                            <constraint firstItem="h2T-fe-UCF" firstAttribute="centerX" secondItem="nPf-6T-SVS" secondAttribute="centerX" id="qtH-WI-jAg"/>
+                            <constraint firstItem="fos-xO-1Qd" firstAttribute="top" secondItem="zj1-WG-3W9" secondAttribute="bottom" constant="-4.5" id="rZa-oo-5r3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="h2T-fe-UCF" id="9Do-WZ-FRr"/>
+                        <outlet property="cityNameLabel" destination="zj1-WG-3W9" id="ONU-LO-QQO"/>
+                        <outlet property="cityTempLabel" destination="fos-xO-1Qd" id="6HS-za-sUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Cf-SN-Tk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5" y="398.5"/>
+        </scene>
+    </scenes>
+</document>
